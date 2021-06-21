@@ -5,6 +5,7 @@ USER coder
 
 # Apply VS Code settings
 COPY deploy-container/settings.json .local/share/code-server/User/settings.json
+COPY deploy-container/keybindings.json .local/share/code-server/User/keybindings.json
 
 # Use bash shell
 ENV SHELL=/bin/bash
@@ -24,12 +25,16 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-# RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension golang.go
 
-# Install apt packages:
-# RUN sudo apt-get install -y ubuntu-make
+# Install go
+RUN curl -O https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz && \
+    tar xvf go1.16.5.linux-amd64.tar.gz && \
+    rm -f go1.16.5.linux-amd64.tar.gz
+COPY deploy-container/golang.sh /usr/bin/deploy-container-golang.sh
+RUN /usr/bin/deploy-container-golang.sh
 
-# Copy files: 
+# Copy files:
 # COPY deploy-container/myTool /home/coder/myTool
 
 # -----------

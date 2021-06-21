@@ -1,7 +1,255 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "git.postCommitCommand": "sync",
-  "git.enableSmartCommit": true,
+  "[css]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+
+    // Automatically format code on save and during typing of certain characters
+    // (like `;` and `}`).
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+
+    // Draw a guide line at 80 characters, where Dart's formatting will wrap code.
+    "editor.rulers": [80],
+
+    // Disables built-in highlighting of words that match your selection. Without
+    // this, all instances of the selected text will be highlighted, interfering
+    // with Dart's ability to highlight only exact references to the selected variable.
+    "editor.selectionHighlight": false,
+
+    // By default, VS Code prevents code completion from popping open when in
+    // "snippet mode" (editing placeholders in inserted code). Setting this option
+    // to `false` stops that and allows completion to open as normal, as if you
+    // weren't in a snippet placeholder.
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+    // By default, VS Code will pre-select the most recently used item from code
+    // completion. This is usually not the most relevant item.
+    //
+    // "first" will always select top item
+    // "recentlyUsedByPrefix" will filter the recently used items based on the
+    //     text immediately preceding where completion was invoked.
+    "editor.suggestSelection": "first",
+
+    // Allows pressing <TAB> to complete snippets such as `for` even when the
+    // completion list is not visible.
+    "editor.tabCompletion": "onlySnippets",
+
+    // By default, VS Code will populate code completion with words found in the
+    // current file when a language service does not provide its own completions.
+    // This results in code completion suggesting words when editing comments and
+    // strings. This setting will prevent that.
+    "editor.wordBasedSuggestions": false
+  },
+  "[elm]": {
+    "editor.formatOnSave": true
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 120
+  },
+  "[haskell]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modifications"
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modifications"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[php]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.quickSuggestions": { "comments": true }
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modifications"
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modifications"
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modifications"
+  },
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "FIXME:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "FixMe:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "FIXIT:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "FixIt:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "FIX:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "Fix:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "BUG:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "Bug:",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB"
+    },
+    {
+      "tag": "NOTE:",
+      "color": "#3498DB"
+    },
+    {
+      "tag": "Note:",
+      "color": "#3498DB"
+    },
+    {
+      "tag": "TODO:",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "ToDo:",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "Todo:",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "WARNING:",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "Warning:",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379"
+    },
+    {
+      "tag": "INFO:",
+      "color": "#98C379"
+    },
+    {
+      "tag": "Info:",
+      "color": "#98C379"
+    },
+    {
+      "tag": "//",
+      "color": "#474747"
+    }
+  ],
+  "cmake.configureOnOpen": false,
+  "debug.inlineValues": true,
+  "debug.openDebug": "openOnDebugBreak",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false
+  },
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.fontWeight": "800",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.hover.delay": 500,
+  "editor.insertSpaces": true,
+  "editor.largeFileOptimizations": false,
+  "editor.lineHeight": 20,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.suggest.localityBonus": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "git.autofetch": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockgreen",
+    "uncoveredGutterStyle": "blockred"
+  },
+  "go.coverOnSave": false,
+  "go.coverOnSingleTest": true,
+  "go.formatTool": "goimports",
+  "go.gocodeAutoBuild": true,
+  "go.gopath": "~/go",
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "workbench.colorTheme": "Quiet Light",
+  "workbench.sideBar.location": "right"
 }

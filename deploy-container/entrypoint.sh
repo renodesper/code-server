@@ -77,5 +77,10 @@ else
 fi
 
 echo "[$PREFIX] Starting code-server..."
+
+# NOTE: export some env variables
+export GOPATH=$HOME/go
+export PATH=$HOME/go/bin:$PATH
+
 # Now we can run code-server with the default entrypoint
 /usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 $START_DIR
